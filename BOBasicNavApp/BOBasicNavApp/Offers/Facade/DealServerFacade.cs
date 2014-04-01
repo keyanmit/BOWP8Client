@@ -143,7 +143,10 @@ namespace BOBasicNavApp.Offers.Facade
             DealsDownloadcompleteEventHandler handler = DealsDownloadSuccess;
             if (handler != null)
             {
-                handler(this, eventArgs);
+                Deployment.Current.Dispatcher.BeginInvoke(() =>
+                {
+                    handler(this, eventArgs);
+                });
             }
         }
 
@@ -152,7 +155,10 @@ namespace BOBasicNavApp.Offers.Facade
             DealsDownloadcompleteEventHandler handler = DealsDownloadFailed;
             if (handler != null)
             {
-                handler(this, eventArgs);
+                Deployment.Current.Dispatcher.BeginInvoke(() =>
+                {
+                    handler(this, eventArgs);
+                });
             }
         }
         #endregion

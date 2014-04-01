@@ -8,6 +8,7 @@ using System.Windows.Navigation;
 using BOBasicNavApp.Offers.Facade;
 using BOBasicNavApp.Offers.Model;
 using BOBasicNavApp.Offers.ViewModel;
+using BOBasicNavApp.Offers.Views;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using BOBasicNavApp.Resources;
@@ -21,12 +22,10 @@ namespace BOBasicNavApp
         public MainPage()
         {
             InitializeComponent();
-
+            
             // Set the data context of the LongListSelector control to the sample data
-            DataContext = App.ViewModel;
-
-            var VM = new DailyDealsViewModel();
-            VM.GetDealsForUserCurrentLocation();
+            //DataContext = App.ViewModel;
+            
             // Sample code to localize the ApplicationBar
             //BuildLocalizedApplicationBar();
         }
@@ -44,14 +43,28 @@ namespace BOBasicNavApp
         private void MainLongListSelector_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             // If selected item is null (no selection) do nothing
-            if (MainLongListSelector.SelectedItem == null)
-                return;
+            //if (MainLongListSelector.SelectedItem == null)
+            //    return;
 
-            // Navigate to the new page
-            NavigationService.Navigate(new Uri("/DetailsPage.xaml?selectedItem=" + (MainLongListSelector.SelectedItem as ItemViewModel).ID, UriKind.Relative));
+            //// Navigate to the new page
+            //NavigationService.Navigate(new Uri("/DetailsPage.xaml?selectedItem=" + (MainLongListSelector.SelectedItem as ItemViewModel).ID, UriKind.Relative));
 
-            // Reset selected item to null (no selection)
-            MainLongListSelector.SelectedItem = null;
+            //// Reset selected item to null (no selection)
+            //MainLongListSelector.SelectedItem = null;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                var url = new Uri("/Offers/Views/DealsPage.xaml", UriKind.Relative);
+                //var url = new Uri("/Offers/Views/Page1.xaml", UriKind.Relative);
+                NavigationService.Navigate(url);                
+            }
+            catch (Exception ev)
+            {
+
+            }
         }
 
         // Sample code for building a localized ApplicationBar

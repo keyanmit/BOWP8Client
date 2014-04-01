@@ -11,11 +11,11 @@ namespace BOBasicNavApp.Offers.Settings
         static DealServerSettings()
         {
             BingDomain = "http://bing.com";
-            DealsDomain = "http://deals.msftoffer.com";
+            DealsDomain = "http://deals.msftoffers.com";
             ResultCount = 3;
             Country_Region = "IN";
             Ranking = "distance";
-            ClientId = "MsnIndia_DigitalCoupons";
+            ClientId = "karthikeyan_clientWP8";
             BingOffersDealDetailsPath = "/offers/dailydeals/details/";
             BingOffersNearbyDeals = "{0}/api/lomoDeals/GetNearbyDeals?coord={1},{2}&count={3}&radius={4}&bor={5}&refinements={6}";
         }
