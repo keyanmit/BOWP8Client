@@ -8,7 +8,7 @@ namespace BOBasicNavApp.Offers.Settings
 {
     class BingMapsSettings
     {
-        public static string ApiKey = "Ap5qK4KZB2VnF3ulrpdcoOLH-JvW0pqDos_RIBB8ehkdfsLQXNGKBwOmGACeQHvF";
+        public static string ApiKey = "";
         public static string BingMapsDomain = "http://dev.virtualearth.net/REST/v1/Locations";        
     }
 }
