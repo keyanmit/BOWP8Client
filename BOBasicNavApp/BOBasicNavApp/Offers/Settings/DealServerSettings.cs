@@ -18,6 +18,7 @@ namespace BOBasicNavApp.Offers.Settings
             ClientId = "karthikeyan_clientWP8";
             BingOffersDealDetailsPath = "/offers/dailydeals/details/";
             BingOffersNearbyDeals = "{0}/api/lomoDeals/GetNearbyDeals?coord={1},{2}&count={3}&radius={4}&bor={5}&refinements={6}";
+            QueryRadius = 5000;
         }
         public static string BingDomain { get; set; }
         public static string DealsDomain { get; set; }
